@@ -1,7 +1,7 @@
 <header class="header">
   <div class="container flex header__container">
-    <a href="#" class="header__btn-go-back">go back</a>
-    <nav class="nav__left">
+    <a href="#" class="header__btn--back">go back</a>
+    <nav class="nav nav__left flex">
       <ul class="nav__left-list list-reset flex">
         <li class="nav__left-item">
           <a href="#" class="nav__left-link">story</a>
@@ -11,12 +11,16 @@
         </li>
       </ul>
     </nav>
-    <img src="" alt="" class="header__red-point">
-    <a href="" class="header__logo">
-      <img src="" alt="" class="header__logo-img">
-    </a>
-    <img src="" alt="" class="header__blue-point">
-    <nav class="nav__right">
+
+    <div class="header__logo-block flex">
+      <img class="header__red-point" src="../img/svg/red_point.svg" alt="red point image" >
+      <a href="" class="header__logo">
+        <img class="header__logo-img" src="../img/svg/logo.svg" alt="logo icon" >
+      </a>
+      <img class="header__blue-point" src="../img/svg/blue_point.svg" alt="blue point image" >
+    </div>
+
+    <nav class="nav nav__right flex">
       <ul class="nav__right-list list-reset flex">
         <li class="nav__right-item">
           <a href="#" class="nav__right-link">contact</a>
@@ -26,6 +30,6 @@
         </li>
       </ul>
     </nav>
-    <a href="#" class="header__btn-clone">clone</a>
+    <a href="#" class="header__btn--clone">clone</a>
   </div>
 </header>

@@ -1,7 +1,106 @@
 .header{
+
   &__container{
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #000000;
+    min-height: 70px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+
+  &__btn--back,
+  &__btn--clone{
+    width: 157px;
+    height: 52px;
+    background: #FB4B4D;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+
+    &:hover{
+      background: #8B83F6;
+      transition: 0.3s ease-in-out;
+    }
+  }
+
+  &__logo-block{
+    max-width: 200px;
+    width: 100%;
+    min-height: 70px;
     align-items: center;
     justify-content: space-between;
   }
 
+  &__red-point,
+  &__blue-point{
+    width: 17px;
+    height: 17px;
+  }
+
+  &__logo{
+    width: 61px;
+    height: 70px;
+  }
 }
+
+.nav{
+
+  &__left{
+    max-width: 237px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__right{
+    max-width: 275px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__left-list{
+    max-width: 230px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__right-list{
+    max-width: 270px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__left-link,
+  &__right-link{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #222222;
+    cursor: pointer;
+    padding-bottom: 5px;
+    transition: 0.5s ease-in-out;
+
+    &:hover{
+      border-bottom: 1px solid #222222;
+      transition: 0.5s ease-in-out;
+    }
+  }
+
+}
+
+
+
+
+
+
