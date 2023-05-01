@@ -1,0 +1,100 @@
+.hero{
+  max-height: 990px;
+
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    border-left: 1px solid #222222;
+    border-right: 1px solid #222222;
+    border-bottom: 1px solid #222222;
+  }
+
+  &__left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // &__img-brand{
+  //   border-bottom: 1px solid #222222;
+  // }
+
+  &__marquee{
+    width: 103%;
+    margin-right: 19px;
+    border-bottom: 1px solid #222222;
+    border-top: 1px solid #222222;
+    margin-bottom: 20px;
+  }
+
+  &__marquee-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__message{
+    display: block;
+    position: relative;
+    margin-right: 126px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #000000;
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+    &::before{
+      content: "";
+      position: absolute;
+      width: 68px;
+      height: 31px;
+      background-image: url(../../img/svg/chili_paper.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: -7px;
+      left: -92px;
+    }
+  }
+
+  &__img-bottom{
+    padding: 19px 19px 30px;
+  }
+
+
+  &__right{
+    width: 50%;
+    border-left: 1px solid #222222;
+    align-content: center;
+  }
+
+  &__title{
+    display: block;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: 65px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--dark-color);
+    padding-bottom: 16px;
+    margin: 24px 80px 16px;
+  }
+
+  &__img-buttle{
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 19px 19px 30px;
+  }
+
+
+}
