@@ -1,0 +1,100 @@
+.lava{
+  &__container{
+    border: 1px solid #222222;
+  }
+  &__title{
+    max-width: 785px;
+    width: 100%;
+    margin: 69px auto 58px;
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 73px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color:var(--dark-color);
+    text-align: center;
+    position: relative;
+  }
+
+  &__line{
+    margin: 0 auto;
+    height: 1px;
+    background-color: #222222;
+    margin-left: -21px;
+    margin-right: -21px;
+    margin-bottom: 20px;
+  }
+
+  &__title::before{
+    content: "";
+    position: absolute;
+    width: 225px;
+    height: 156px;
+    top: 0;
+    left: -276px;
+    background-image: url(../../img/svg/scorpion_left.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__title::after{
+    content: "";
+    position: absolute;
+    width: 225px;
+    height: 156px;
+    top: 0;
+    right: -276px;
+    background-image: url(../../img/svg/scorpion_right.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__card-block{
+    gap: 23px;
+    padding-bottom: 23px;
+  }
+
+  &__card-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 436px;
+	  height: 659px;
+
+    background-image: url(../../img/svg/card_bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+  }
+
+  &__card-descr{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-top: 129px;
+    margin-bottom: 14px;
+  }
+
+  &__card-title{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 14px;
+
+  }
+
+  &__card-img{
+    display: block;
+    max-width: 390px;
+    width: 100%;
+    padding: 0 23px 23px 23px;
+  }
+
+
+}
