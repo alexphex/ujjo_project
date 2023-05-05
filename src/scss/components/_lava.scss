@@ -50,6 +50,7 @@
   }
 
   &__card-block{
+    justify-content: center;
     gap: 23px;
     padding-bottom: 23px;
   }
@@ -60,12 +61,66 @@
     align-items: center;
     width: 436px;
 	  height: 659px;
-
     background-image: url(../../img/svg/card_bg.svg);
     background-repeat: no-repeat;
     background-size: cover;
     bottom: 0;
+
+    &--light,
+    &--dark,
+    &--ujjo{
+      position: relative;
+    }
+
+    &--light::before{
+      content: "";
+      position: absolute;
+      width: 57px;
+      height: 57px;
+      background-image: url(../../img/svg/fire_icon.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 0;
+      left: 0;
+    }
+
+    &--dark::after{
+      content: "";
+      position: absolute;
+      width: 57px;
+      height: 57px;
+      background-image: url(../../img/svg/fire_icon.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 0;
+      right: 0;
+    }
+
+    &--ujjo::before{
+      content: "";
+      position: absolute;
+      width: 57px;
+      height: 88px;
+      background-image: url(../../img/svg/fire_long_icon.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 0;
+      left: -38px;
+    }
+
+    &--ujjo::after{
+      content: "";
+      position: absolute;
+      width: 57px;
+      height: 88px;
+      background-image: url(../../img/svg/fire_long_icon.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 0;
+      right: -38px;
+    }
   }
+
 
   &__card-descr{
     font-weight: 400;
@@ -95,6 +150,4 @@
     width: 100%;
     padding: 0 23px 23px 23px;
   }
-
-
 }
