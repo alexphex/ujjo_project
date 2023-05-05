@@ -1,0 +1,52 @@
+.marquee{
+
+  &__container{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__marquee-block{
+    border-bottom: 1px solid #222222;
+    border-left: 1px solid #222222;
+    border-right: 1px solid #222222;
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__marquee-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__message{
+    display: block;
+    position: relative;
+    margin-right: 126px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #000000;
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+    &::before{
+      content: "";
+      position: absolute;
+      width: 68px;
+      height: 31px;
+      background-image: url(../../img/svg/chili_paper.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: -7px;
+      left: -92px;
+    }
+  }
+}
