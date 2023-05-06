@@ -1,0 +1,50 @@
+.bottomlogo{
+  margin-top: -188px;
+
+  &__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #222222;
+    border-right: 1px solid #222222;
+    border-bottom: 1px solid #222222;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__img{
+    display: block;
+    max-width: 1439px;
+    width: 100%;
+  }
+}
+
+.copyright{
+
+  &__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #CDFD3B;
+    border-left: 1px solid #222222;
+    border-right: 1px solid #222222;
+    border-bottom: 1px solid #222222;
+  }
+
+  &__text{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: #000000;
+
+    &:first-child{
+      margin-left: 93px;
+    }
+
+    &:last-child{
+      margin-right: 93px;
+    }
+  }
+}
