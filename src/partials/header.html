@@ -1,13 +1,19 @@
 <header class="header">
   <div class="container flex header__container">
     <a href="#" class="header__btn--back">go back</a>
-    <nav class="nav nav__left flex">
-      <ul class="nav__left-list list-reset flex">
-        <li class="nav__left-item">
-          <a href="#" class="nav__left-link">story</a>
+    <nav class="nav flex" data-menu>
+      <ul class="nav__list list-reset flex">
+        <li class="nav__item">
+          <a href="#" class="nav__link">story</a>
         </li>
-        <li class="nav__left-item">
-          <a href="#" class="nav__left-link">shop</a>
+        <li class="nav__item">
+          <a href="#" class="nav__link">shop</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">contact</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">wholesale</a>
         </li>
       </ul>
     </nav>
@@ -20,16 +26,11 @@
       <img class="header__blue-point" src="../img/svg/blue_point.svg" alt="blue point image" >
     </div>
 
-    <nav class="nav nav__right flex">
-      <ul class="nav__right-list list-reset flex">
-        <li class="nav__right-item">
-          <a href="#" class="nav__right-link">contact</a>
-        </li>
-        <li class="nav__right-item">
-          <a href="#" class="nav__right-link">wholesale</a>
-        </li>
-      </ul>
-    </nav>
+
     <a href="#" class="header__btn--clone">clone</a>
+
+    <button class="burger" aria-label="Открыть меню" aria-expanded="false"  data-burger>
+      <span class="burger__line"></span>
+    </button>
   </div>
 </header>

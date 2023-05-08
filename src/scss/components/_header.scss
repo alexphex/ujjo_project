@@ -7,6 +7,7 @@
     min-height: 70px;
     padding-top: 21px;
     padding-bottom: 21px;
+    position: relative;
   }
 
   &__btn--back,
@@ -26,10 +27,14 @@
     cursor: pointer;
     transition: 0.3s ease-in-out;
 
-
     &:hover{
       background: #8B83F6;
       transition: 0.3s ease-in-out;
+    }
+
+    @include tablet{
+      width: 80px;
+      height: 35px;
     }
   }
 
@@ -39,6 +44,20 @@
     min-height: 70px;
     align-items: center;
     justify-content: space-between;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    @include big-desktop{
+      max-width: 150px;
+    }
+
+    @include small-tablet{
+      max-width: 114px;
+    }
   }
 
   &__red-point,
@@ -55,32 +74,27 @@
 
 .nav{
 
-  &__left{
-    max-width: 237px;
+  width: 100%;
+
+  &__list{
     width: 100%;
     justify-content: space-between;
+
+    @include small-tablet{
+      margin-right: 0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 
-  &__right{
-    max-width: 275px;
-    width: 100%;
-    justify-content: space-between;
+  &__item{
+    @include small-tablet{
+      margin-bottom: 15px;
+    }
   }
 
-  &__left-list{
-    max-width: 230px;
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  &__right-list{
-    max-width: 270px;
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  &__left-link,
-  &__right-link{
+  &__link{
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
@@ -108,6 +122,30 @@
       width: 100%;
     }
   }
+
+  @include small-tablet{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 60%;
+    height: 300px;
+    padding: var(--offset);
+    overflow-y: auto;
+    z-index: 100;
+    background-color: #ffffff;
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 51px;
+    border: 1px solid #222222;
+  }
+}
+
+.nav.menu--active{
+  visibility: visible;
+  transform: none;
 }
 
 

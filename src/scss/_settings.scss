@@ -115,3 +115,18 @@ a {
 .grid{
   display: grid;
 }
+
+.burger {
+  @include burger;
+
+  --burger-height: 23px;
+  color: #222222;
+  display: none;
+
+  @include small-tablet{
+    display: block;
+  }
+
+}
+
+
