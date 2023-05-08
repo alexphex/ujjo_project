@@ -39,12 +39,36 @@
     letter-spacing: 0.5px;
     color: #000000;
 
-    &:first-child{
-      margin-left: 93px;
-    }
+    &--link{
+      cursor: pointer;
+      text-transform: uppercase;
+      position: relative;
+      line-height: 1;
 
-    &:last-child{
-      margin-right: 93px;
+      &::after{
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 0;
+        height: 1px;
+        background-color: #222222;
+        content: "";
+        transition: width 0.3s ease-out;
+      }
+
+      &:first-child{
+        margin-left: 93px;
+      }
+
+      &:last-child{
+        margin-right: 93px;
+      }
+
+      &:hover:after,
+      &:focus:after {
+	      width: 100%;
+      }
     }
   }
 }
