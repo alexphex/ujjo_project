@@ -83,6 +83,10 @@
       height: 27px;
       margin-left: 0;
     }
+
+    @include xs-mobile {
+      display: none;
+    }
   }
 
   &__logo-block{
