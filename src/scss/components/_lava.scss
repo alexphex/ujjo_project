@@ -14,6 +14,16 @@
     color:var(--dark-color);
     text-align: center;
     position: relative;
+
+    @include mobile{
+      font-size: 37px;
+      line-height: 45px;
+    }
+
+    @include small-mobile{
+      font-size: 19px;
+      line-height: 21px;
+    }
   }
 
   &__line{
@@ -35,6 +45,23 @@
     background-image: url(../../img/svg/scorpion_left.svg);
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include biggest-desktop{
+      width: 167px;
+      height: 117px;
+      left: -87px;
+    }
+
+    @include big-desktop{
+      width: 100px;
+      height: 70px;
+      left: 53px;
+      top: 83px;
+    }
+
+    @include small-tablet{
+      display: none;
+    }
   }
 
   &__title::after{
@@ -47,10 +74,35 @@
     background-image: url(../../img/svg/scorpion_right.svg);
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include biggest-desktop{
+      width: 167px;
+      height: 117px;
+      right: -87px;
+    }
+
+    @include big-desktop{
+      width: 100px;
+      height: 70px;
+      right: 53px;
+      top: 83px;
+    }
+
+    @include small-tablet{
+      top: -64px;
+    }
+
+    @include mobile{
+      width: 57px;
+      height: 40px;
+      right: 27px;
+      top: -45px;
+    }
   }
 
   &__card-block{
     justify-content: center;
+    flex-wrap: wrap;
     gap: 23px;
     padding-bottom: 23px;
   }
@@ -65,6 +117,16 @@
     background-repeat: no-repeat;
     background-size: cover;
     bottom: 0;
+
+    @include mobile{
+      width: 361px;
+      height: 545px;
+    }
+
+    @include small-mobile{
+      width: 300px;
+      height: 453px;
+    }
 
     &--light,
     &--dark,
@@ -94,6 +156,10 @@
       background-size: cover;
       top: 0;
       right: 0;
+
+      @include mobile{
+        left: 0;
+      }
     }
 
     &--ujjo::before{
@@ -106,6 +172,10 @@
       background-size: cover;
       top: 0;
       left: -38px;
+
+      @include mobile{
+        left: 0;
+      }
     }
 
     &--ujjo::after{
@@ -118,6 +188,10 @@
       background-size: cover;
       top: 0;
       right: -38px;
+
+      @include mobile{
+        display: none;
+      }
     }
   }
 
@@ -142,6 +216,10 @@
     color: #000000;
     margin-bottom: 14px;
 
+    @include small-mobile{
+      font-size: 21px;
+    }
+
   }
 
   &__card-img{
@@ -149,5 +227,13 @@
     max-width: 390px;
     width: 100%;
     padding: 0 23px 23px 23px;
+
+    @include mobile{
+      max-width: 306px;
+    }
+
+    @include small-mobile{
+      max-width: 230px;
+    }
   }
 }
