@@ -128,6 +128,10 @@
       height: 453px;
     }
 
+    @include xs-mobile{
+      height: 357px;
+    }
+
     &--light,
     &--dark,
     &--ujjo{
@@ -144,6 +148,11 @@
       background-size: cover;
       top: 0;
       left: 0;
+
+      @include xs-mobile{
+        width: 31px;
+        height: 31px;
+      }
     }
 
     &--dark::after{
@@ -160,6 +169,11 @@
       @include mobile{
         left: 0;
       }
+
+      @include xs-mobile{
+        width: 31px;
+        height: 31px;
+      }
     }
 
     &--ujjo::before{
@@ -175,6 +189,12 @@
 
       @include mobile{
         left: 0;
+      }
+
+      @include xs-mobile{
+        width: 37px;
+        height: 58px;
+        top: -12px;
       }
     }
 
@@ -205,6 +225,10 @@
     color: #000000;
     margin-top: 129px;
     margin-bottom: 14px;
+
+    @include xs-mobile{
+      margin-top: 72px;
+    }
   }
 
   &__card-title{
@@ -218,6 +242,10 @@
 
     @include small-mobile{
       font-size: 21px;
+    }
+
+    @include xs-mobile{
+      line-height: 10px;
     }
 
   }
@@ -234,6 +262,10 @@
 
     @include small-mobile{
       max-width: 230px;
+    }
+
+    @include xs-mobile{
+      max-width: 210px;
     }
   }
 }
