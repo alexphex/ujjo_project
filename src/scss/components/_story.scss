@@ -1,9 +1,19 @@
 .story{
   min-height: 698px;
 
+  @include mobile{
+    min-height: 521px;
+  }
+
   &__container{
     padding-left: 0;
     padding-right: 0;
+
+    @include mobile{
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 
   &__left{
@@ -11,6 +21,10 @@
     border-left: 1px solid #222222;
     border-right: 1px solid #222222;
     border-bottom: 1px solid #222222;
+
+    @include mobile{
+      width: 100%;
+    }
   }
 
   &__title{
@@ -24,6 +38,16 @@
     letter-spacing: 0.5px;
     text-transform: uppercase;
     color: #000000;
+
+    @include mobile{
+      font-size: 37px;
+      line-height: 45px;
+    }
+
+    @include small-mobile{
+      font-size: 19px;
+      line-height: 21px;
+    }
   }
 
   &__left-img{
@@ -38,15 +62,64 @@
     width: 50%;
     border-right: 1px solid #222222;
     border-bottom: 1px solid #222222;
-    background-image: url(../../img/svg/story_right_img.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
+
+    @include mobile{
+      width: 100%;
+      border-left: 1px solid #222222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include xs-mobile{
+      max-height: 280px;
+      position: relative;
+
+      &::after{
+        content: "";
+        position: absolute;
+        width: 53px;
+        height: 44px;
+        top: 6px;
+        right: 17px;
+        background-image: url(../../img/svg/cup.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
   }
 
   &__right-content{
     height: 100%;
     margin: 0 auto;
     text-align: center;
+    background-image: url(../../img/svg/story_right_img.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include big-desktop{
+      margin-top: 25px;
+      background-size: contain;
+    }
+
+    @include small-tablet{
+      margin-top: 90px;
+    }
+
+    @include mobile{
+      padding-top: 15px;
+      padding-bottom: 15px;
+      max-width: 450px;
+      width: 100%;
+      max-height: 450px;
+      height: 100%;
+    }
+
+    @include xs-mobile{
+      background-image: none;
+    }
+
   }
 
   &__right-text{
@@ -55,21 +128,52 @@
     width: 100%;
     margin: 0 auto;
 
+    @include big-desktop{
+      font-size: 12px;
+      max-width: 273px;
+
+    }
+
+    @include small-tablet{
+      font-size: 11px;
+    }
+
     &--first{
       padding-top: 135px;
+
+      @include small-tablet{
+        padding-top: 80px;
+      }
+
+      @include small-mobile{
+        padding-top: 77px;
+        font-size: 10px;
+      }
     }
 
     &--second{
       padding-top: 22px;
+
+      @include small-tablet{
+        padding-top: 8px;
+      }
     }
 
     &--third{
       padding-top: 26px;
+
+      @include small-tablet{
+        padding-top: 8px;
+      }
     }
 
     &--fourth{
       padding-top: 24px;
       padding-bottom: 135px;
+
+      @include small-tablet{
+        padding-top: 8px;
+      }
     }
   }
 }
