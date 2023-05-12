@@ -1,6 +1,26 @@
 .bottomlogo{
   margin-top: -188px;
 
+  @include biggest-desktop{
+    margin-top: -156px;
+  }
+
+  @include big-desktop{
+    margin-top: -111px;
+  }
+
+  @include small-tablet{
+    margin-top: -68px;
+  }
+
+  @include small-mobile{
+    margin-top: -52px;
+  }
+
+  @include xs-mobile{
+    margin-top: -34px;
+  }
+
   &__container{
     display: flex;
     align-items: center;
@@ -29,6 +49,13 @@
     border-left: 1px solid #222222;
     border-right: 1px solid #222222;
     border-bottom: 1px solid #222222;
+    min-height: 65px;
+
+    @include xs-mobile{
+      padding-left: 7px;
+      padding-right: 7px;
+    }
+
   }
 
   &__text{
@@ -39,11 +66,25 @@
     letter-spacing: 0.5px;
     color: #000000;
 
+    @include mobile{
+      font-size: 10px;
+      line-height: 10px;
+    }
+
+    @include small-mobile{
+      width: 150px;
+      text-align: center;
+    }
+
     &--link{
       cursor: pointer;
       text-transform: uppercase;
       position: relative;
       line-height: 1;
+
+      @include mobile{
+        font-size: 12px;
+      }
 
       &::after{
         display: block;
@@ -59,10 +100,18 @@
 
       &:first-child{
         margin-left: 93px;
+
+        @include small-tablet{
+        margin-left: 0;
+        }
       }
 
       &:last-child{
         margin-right: 93px;
+
+        @include small-tablet{
+          margin-right: 0;
+        }
       }
 
       &:hover:after,

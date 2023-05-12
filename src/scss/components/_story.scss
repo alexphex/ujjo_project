@@ -1,6 +1,14 @@
 .story{
   min-height: 698px;
 
+  @include biggest-desktop{
+    min-height: 625px;
+  }
+
+  @include tablet{
+    min-height: 552px;
+  }
+
   @include mobile{
     min-height: 521px;
   }
